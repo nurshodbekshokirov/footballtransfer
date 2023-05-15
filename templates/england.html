@@ -1,0 +1,19 @@
+{% extends 'header.html' %}
+    {% block content %}
+      <div class="nav">
+        <h2>– {{mamlakat}} –</h2>
+        <table class="content-nav"></table>
+      </div>
+      <div class="content" style="margin-top: 170px ;">
+        <div class="clubs">
+          {% for i in davlat %}
+          <div class="club">
+            <a href="/clubs/{{i.id}}">
+              <img src="{{i.logo.url}}" alt="" />
+              {{i.nom}}
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endblock %}

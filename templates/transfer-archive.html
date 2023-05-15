@@ -1,0 +1,14 @@
+{% extends 'header.html' %}
+{% block content %}
+      <div class="content">
+        <div class="stats">
+          {%for i in Transferlar %}
+          <div>
+            <a href="/mavsum/{{i.mavsum}}">Season {{i.mavsum}}</a>
+          </div>
+          {% endfor %}
+
+
+        </div>
+      </div>
+{% endblock %}
