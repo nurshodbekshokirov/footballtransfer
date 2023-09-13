@@ -4,7 +4,7 @@ from django.db.models import Sum
 from .models import *
 
 def about(request):
-    return render(request,'about.html')
+    return render(request, 'about.html')
 
 def club(request):
     data = {'club': Club.objects.annotate(umum_summa=Sum('futbolchilari__tr_narxi')).order_by('-umum_summa')}
